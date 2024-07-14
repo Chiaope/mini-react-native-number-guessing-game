@@ -4,7 +4,9 @@ import BaseButton from "./BaseButton";
 function StartScreenInputCard() {
     return (
         <View style={styles.startScreenInputCardContainer}>
-            <TextInput placeholder="Enter Number" style={styles.textInputStyle} />
+            <View style={styles.testInputContainer}>
+                <TextInput placeholder="Enter Number" style={styles.textInputStyle} maxLength={2} keyboardType="number-pad" />
+            </View>
             <View style={styles.buttonsContainer}>
                 <View style={styles.buttonContainer}>
                     <BaseButton>Confirm</BaseButton>
@@ -27,11 +29,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#6c6aff',
         padding: '2%',
     },
+    testInputContainer: {
+        flex: 1,
+    },
     textInputStyle: {
         flex: 1,
         borderBottomWidth: 1,
         margin: '3%',
-        fontSize: 30
+        fontSize: 30,
+        textAlign: 'center'
     },
     buttonsContainer: {
         flex: 1,
