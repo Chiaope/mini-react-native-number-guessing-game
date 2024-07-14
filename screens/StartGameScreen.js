@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     },
     startScreenInputCardContainer: {
         width: '80%',
+        height: '20%',
         justifyContent: 'center',
     }
 });
